@@ -1,5 +1,10 @@
 ﻿@import url(http://fonts.googleapis.com/css?family=Montserrat);
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
 .navbar-wrapper {
     position: absolute;
     top: 0;
@@ -16,17 +21,25 @@
 
 .heroArea {
     height: 200px;
-   background-color: #555;
+    background-color: #555;
     width: 100%;
     text-align: center;
+    color: #eee;
 }
 
-
-
     .heroArea h2 {
-        margin-top:0px;
-        padding-top:100px;
+        margin-top: 0px;
+        padding-top: 100px;
         font-family: 'Montserrat', sans-serif;
         text-transform: uppercase;
-        width: 90%;
+        font-size: 20px;
+        max-width: 500px;
     }
+
+.navbar-inverse .navbar-brand {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+}
