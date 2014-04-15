@@ -3,6 +3,7 @@
 h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    text-align:center;
 }
 
 .navbar-wrapper {
@@ -28,6 +29,7 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     color: #eee;
     box-shadow: #333 0px 5px;
+
 }
 
     .heroArea h2 {
@@ -48,4 +50,23 @@ h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-size: 14px;
+}
+
+.img-logo {
+    position: absolute;
+    left: -10px;
+    top: -23px;
+    background-color: #222;
+
+}
+
+
+.img-circle {
+    border: solid 2px #111;
+}
+
+@media (min-width: 768px) {
+    .navbar > .container .navbar-brand {
+        margin-left: 70px;
+    }
 }

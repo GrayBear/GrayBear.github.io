@@ -14,14 +14,15 @@
     .state('graybear.home', {
         url: "/home",
         views: {
-            "SideDetails": { templateUrl: "app/features/graybear/collaberations/collaberations.tpl.html", },
-
+            "side": { templateUrl: "app/features/graybear/collaberations/collaberations.tpl.html", },
+            "main": { templateUrl: "app/features/graybear/projects/projects.tpl.html", },
         }
     })
    .state('graybear.contact', {
        url: "/contact",
        views: {
-           "SideDetails": { templateUrl: "app/features/graybear/contact/contact.tpl.html", }
+           "side": { templateUrl: "app/features/graybear/contact/contact.tpl.html", },
+           "main": { templateUrl: "app/features/graybear/projects/projects.tpl.html", },
        },
        abstract: true,
    })
@@ -40,7 +41,8 @@
    .state('graybear.about', {
        url: "/about",
        views: {
-           "SideDetails": { templateUrl: "app/features/graybear/about/about.tpl.html" }
+           "side": { templateUrl: "app/features/graybear/projects/projects.tpl.html", },
+           "main": { templateUrl: "app/features/graybear/about/about.tpl.html" }
        }
    })
 
