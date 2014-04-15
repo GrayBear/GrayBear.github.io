@@ -1,46 +1,47 @@
-﻿angular.module('test', ['ngQueryString'])
-.controller('TestCtrl', ['$scope', 'ngQueryString', function ($scope, ngQueryString) {
+﻿var graybear = angular.module('test', ['ui.router'])
+.config(function ($stateProvider, $urlRouterProvider) {
 
-    $scope.demo = {};
+    $urlRouterProvider.otherwise("/graybear/home");
 
-    $scope.setQueryString = {}
+    $stateProvider
+   .state('graybear', {
+       url: "/graybear",
+       views: {
+           "mainView": { templateUrl: "app/features/graybear/home.tpl.html" }, 
+       },
+       abstract: true,
+   })
+    .state('graybear.home', {
+        url: "/home",
+        views: {
+            "SideDetails": { templateUrl: "app/features/graybear/collaberations/collaberations.tpl.html", },
 
-    $scope.setQueryStringClick = function () {
+        }
+    })
+   .state('graybear.contact', {
+       url: "/contact",
+       views: {
+           "SideDetails": { templateUrl: "app/features/graybear/contact/contact.tpl.html", }
+       },
+       abstract: true,
+   })
+    .state('graybear.contact.form', {
+        url: "/email",
+        views: {
+            "form": { templateUrl: "app/features/graybear/contact/form/form.tpl.html", }
+        },
+    })
+    .state('graybear.contact.details', {
+        url: "/details",
+        views: {
+            "ContactDetails": { templateUrl: "app/features/graybear/contact/details/details.tpl.html", }
+        },
+    })
+   .state('graybear.about', {
+       url: "/about",
+       views: {
+           "SideDetails": { templateUrl: "app/features/graybear/about/about.tpl.html" }
+       }
+   })
 
-        ngQueryString.setQueryString($scope.setQueryString.name, $scope.setQueryString.value);
-
-    }
-
-    $scope.getQueryString = {};
-
-    $scope.getQueryStringClick = function () {
-
-        $scope.getQueryString.submitted = true;
-        $scope.getQueryString.results = ngQueryString.getQueryString($scope.getQueryString.name);
-
-
-    };
-
-    $scope.getAllQueryString = {};
-
-    $scope.getAllQueryStringClick = function () {
-        $scope.getAllQueryString.submitted = true;
-        $scope.getAllQueryString.results = ngQueryString.getAllQueryString();
-    }
-
-    $scope.clearQueryString = {};
-
-    $scope.clearQueryStringClick = function () {
-         
-        ngQueryString.clearQueryString($scope.clearQueryString.name);
-
-    };
-
-
-    $scope.clearAllQueryStringClick = function () {
-
-        ngQueryString.clearAllQueryString();
-
-    };
-
-}])
+});

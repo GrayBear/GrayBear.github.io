@@ -1,0 +1,32 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+}
+
+@media (min-width: 768px) {
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+}
+
+.heroArea {
+    height: 200px;
+   background-color: #555;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+    .heroArea h2 {
+        margin-top:0px;
+        padding-top:100px;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        width: 90%;
+    }

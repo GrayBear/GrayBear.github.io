@@ -4,58 +4,65 @@
     <meta charset='utf-8'>
 
     <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <title>
-        ngQueryString by GrayBear
+        GrayBearWB
     </title>
 </head>
 
-<body class="container" ng-app="test" ng-controller="TestCtrl">
+<body ng-app="test">
+
+
+    <div class="navbar-wrapper">
+        <div class="container">
+
+            <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">GrayBearWD</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a ui-sref="graybear.home">Home</a></li>
+                            <li><a ui-sref="graybear.about">About</a></li>
+                            <li><a ui-sref="graybear.contact.details">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="heroArea">
+     
+            <h2>In the future the revolution will be downloaded.</h2>
+
+    </div>
+    
     <div class="container">
         <div class="inner">
 
-            <header>
-                <h1>GrayBear Web Development</h1>
-            </header>
-
-            <hr />
-
-            <section id="main_content">
-
-                <h2>Git Repositories</h2>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading">ngQueryString</div>
-                    <div class="panel-body">
-
-                        AngularJS module for using QueryString parameters in your application. 
-
-                        <a href="http://graybear.github.io/ngQueryString/">
-                            ngQueryString
-                        </a>
-                    </div>
-                </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading">ColumnGridCSS</div>
-                    <div class="panel-body">
-
-                        CSS grid system for floating content, Chrome only, ALPHA
-                        
-                        <a href="http://graybear.github.io/ColumnGrid/">
-                            ColumnGridCSS
-                        </a>
-                    </div>
-                </div>
 
 
-              
+            <div ui-view="mainView"></div>
 
+            <footer></footer>
+            <script src="js/bootstrap.min.js"></script>
 
-            </section>
+            <script src="app/libs/angular/angular.min.js"></script>
+            <script src="app/libs/uiRouter/angular-ui-router.min.js"></script>
 
+            <script src="app/app.mdl.js"></script>
 
         </div>
     </div>
