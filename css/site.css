@@ -3,7 +3,7 @@
 h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    text-align:center;
+    text-align: center;
 }
 
 .navbar-wrapper {
@@ -29,7 +29,6 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     color: #eee;
     box-shadow: #333 0px 5px;
-
 }
 
     .heroArea h2 {
@@ -57,9 +56,8 @@ h1, h2, h3, h4, h5 {
     left: -10px;
     top: -23px;
     background-color: #222;
-
+    visibility: hidden;
 }
-
 
 .img-circle {
     border: solid 2px #111;
@@ -68,5 +66,9 @@ h1, h2, h3, h4, h5 {
 @media (min-width: 768px) {
     .navbar > .container .navbar-brand {
         margin-left: 70px;
+    }
+
+    .img-logo {
+        visibility: visible;
     }
 }
