@@ -1,5 +1,5 @@
 ﻿var graybear = angular.module('test', ['ui.router'])
-.config(function ($stateProvider, $urlRouterProvider) {
+.config(['$stateProvider','$urlRouterProvider',function ($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise("/graybear/home");
 
