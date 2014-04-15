@@ -21,13 +21,16 @@ h1, h2, h3, h4, h5 {
 
 .heroArea {
     height: 200px;
-    background-color: #555;
+    background: linear-gradient(135deg, #666 25%, transparent 25%) -50px 0, linear-gradient(225deg, #666 25%, transparent 25%) -50px 0, linear-gradient(315deg, #666 25%, transparent 25%), linear-gradient(45deg, #666 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: #444;
     width: 100%;
     text-align: center;
     color: #eee;
 }
 
     .heroArea h2 {
+        display: inline-block;
         margin-top: 0px;
         padding-top: 100px;
         font-family: 'Montserrat', sans-serif;
