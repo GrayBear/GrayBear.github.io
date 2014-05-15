@@ -14,12 +14,13 @@
         <a target="_Blank" ng-href="{{fight.url}}" ng-repeat="fight in fights" class="list-group-item">
             <h4 class="list-group-item-heading" ng-bind="fight.about"></h4>
 
-            <p>
-                <b>Description:</b> <span ng-bind="fight.description"></span><br />
-                <b>Result:</b> <span ng-bind="fight.result"></span><br />
-                <b> Conclusion:</b>  <span ng-bind="fight.conclusion"></span>
-
+            <p ng-bind ="fight.description">
             </p>
+
+            <blockquote>
+                <p ng-bind="fight.result"></p>
+                <footer ng-bind="fight.conclusion"></footer>
+            </blockquote>
 
         </a>
     </div>
