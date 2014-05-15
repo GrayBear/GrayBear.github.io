@@ -45,11 +45,10 @@
            "main": { templateUrl: "app/features/graybear/about/about.tpl.html" }
        }
    })
-       .state('graybear.fight', {
+       .state('fight', {
            url: "/fight",
            views: {
-               "side": { templateUrl: "app/features/graybear/contact/contact.tpl.html", },
-               "main": { templateUrl: "app/features/graybear/fight/list/fight.tpl.html", controller: 'fightController' }
+               "mainView": { templateUrl: "app/features/fight/list/fight.tpl.html", controller: 'fightController' }
            }
        })
 

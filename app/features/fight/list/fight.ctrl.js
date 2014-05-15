@@ -2,7 +2,7 @@
     
     var fights = [];
 
-    fights.push({ about: 'arrays of objects', description: 'whats the quickest way to define an array of objects', url: 'http://jsperf.com/arraycreationorpusher', result: '@15/05/2014 : Chrome : frequencies.push({}), IPhone: var frequencies = [{},{}]', conclusion: 'If your only targeting IPhone create it if not push' });
+    fights.push({ about: 'arrays of objects', description: 'whats the quickest way to define an array of objects', url: 'http://jsperf.com/arraycreationorpusher', result: '@15/05/2014 : Chrome : frequencies.push({}), IPhone: var frequencies = [{},{}]', conclusion: 'If your only targeting IPhone create it if not push it to the array' });
 
     fights.push({ about: 'Looping through arrays', description: 'whats the quickest way of looping through an array', url: 'http://jsperf.com/spinningloopswhatsfaster/2', result: '@15/05/2014 : chrome makes for the best option', conclusion: 'For is the winner' })
 
