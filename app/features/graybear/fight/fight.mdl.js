@@ -1,0 +1,1 @@
+﻿var fight = angular.module('graybear.fight', [])

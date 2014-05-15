@@ -1,5 +1,5 @@
-﻿var graybear = angular.module('graybear', ['ui.router'])
-.config(['$stateProvider','$urlRouterProvider',function ($stateProvider, $urlRouterProvider) {
+﻿var graybear = angular.module('graybear', ['ui.router', 'graybear.fight'])
+.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise("/graybear/home");
 
@@ -7,7 +7,7 @@
    .state('graybear', {
        url: "/graybear",
        views: {
-           "mainView": { templateUrl: "app/features/graybear/home.tpl.html" }, 
+           "mainView": { templateUrl: "app/features/graybear/home.tpl.html" },
        },
        abstract: true,
    })
@@ -45,5 +45,12 @@
            "main": { templateUrl: "app/features/graybear/about/about.tpl.html" }
        }
    })
+       .state('graybear.fight', {
+           url: "/fight",
+           views: {
+               "side": { templateUrl: "app/features/graybear/contact/contact.tpl.html", },
+               "main": { templateUrl: "app/features/graybear/fight/list/fight.tpl.html", controller: 'fightController' }
+           }
+       })
 
-});
+}]);

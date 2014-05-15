@@ -25,17 +25,19 @@ h1, h2, h3, h4, h5 {
     height: 200px;
 }
 
-.heroArea div {
-    height: 200px;
-     background-image: radial-gradient(transparent 60%, rgba(255, 38, 255, .5) 60%, rgba(255, 38, 255, .5));
-     background-size: 100px 100px;
-     background-color: rgba(000,000,000,0.4);
-    width: 100%;
-    text-align: center;
-    color: #eee;
-    box-shadow: #333 0px 5px;
-    
-}
+    .heroArea div {
+        height: 200px;
+        background-image: -gradient(transparent 60%, rgba(255, 38, 255, .2) 60%, rgba(255, 38, 255, .2));
+        -moz-background-size: 100px 100px;
+        -o-background-size: 100px 100px;
+        -webkit-background-size: 100px 100px;
+        background-size: 100px 100px;
+        background-color: rgba(000,000,000,0.4);
+        width: 100%;
+        text-align: center;
+        color: #eee;
+        box-shadow: #333 0px 5px;
+    }
 
     .heroArea div h2 {
         display: inline-block;
